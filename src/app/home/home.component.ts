@@ -22,8 +22,7 @@ export class HomeComponent implements OnInit {
     this.service.getAll()
       .subscribe(response => {
         this.fixtures = response.json();
-        this.fixtures.sort((a, b) => a.start_time - b.start_time);
-        //  console.log(response.json())
+        this.fixtures.sort((a, b) => b.start_time - a.start_time);
         });
 
     this.secondaryFixtureService.getAll()
