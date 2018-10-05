@@ -12,7 +12,6 @@ import { FixtureService } from './Services/fixture.service';
 import { FixtureFormComponent } from './fixture-form/fixture-form.component';
 import { SecondaryFixtureService } from './Services/secondary-fixture.service';
 import { CompareFixturesPipe } from './compare-fixtures.pipe';
-import {matchCompareService} from "./Services/matchCompare.service";
 
 
 
@@ -37,7 +36,6 @@ import {matchCompareService} from "./Services/matchCompare.service";
   providers: [
     FixtureService,
     SecondaryFixtureService,
-    matchCompareService,
     CompareFixturesPipe
   ],
   
