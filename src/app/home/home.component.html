@@ -1,0 +1,27 @@
+
+  <div class="container" *ngIf="showPageContent">
+        <div *ngFor="let item of fixtures">
+                <div class="time_out">
+                        <h3 class="text-center">
+                            {{item.championship}}
+                           
+                        </h3>
+                        <h5>{{existIndicator | compareFixtures: item:secondaryFixtures }}</h5>
+                        <h6 class="text-center" id="timeOut">{{ item.start_time * 1000 | date:'yyyy-MM-dd HH:mm' }}</h6>
+                    </div><br/>
+             <div class="main-div">
+                    <div class="container card player1 white-color">
+                            {{item.team1}}
+                    </div>
+                    <div>
+                        <span class="versus">VS</span><br/>
+                        <a [routerLink]="['/fixture/', item.id]" class="btn btn-danger btn-sm">More Info</a>
+                    </div> 
+                    <div class="container card player1 white-color">
+                        {{item.team2}}
+                    </div>
+             </div>
+             
+            </div>
+        
+  </div>

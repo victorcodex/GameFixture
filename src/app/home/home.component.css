@@ -1,0 +1,27 @@
+.player1, .player2 {
+    padding: 1rem;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#218838
+} 
+
+.main-div {
+    margin: 1% auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.time_out {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.versus{
+    padding-left: 20px;
+}
+
+.white-color{
+    color: #ffffff;
+}

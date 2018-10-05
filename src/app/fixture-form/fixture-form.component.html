@@ -1,0 +1,50 @@
+
+<div class="row">
+    <div class="col-md-6">
+      <form #f="ngForm" (ngSubmit)="backToHome(f.value)">
+
+        <h3 *ngIf="matchExist" >Match Exist in Secondary.json</h3>
+          <h3 *ngIf="!matchExist" >Match Does Not Exist in Secondary.json</h3>
+          <div class="form-group">
+              <input #id="ngModel" [(ngModel)]="fixture.id" name="id" id="id" type="hidden" class="form-control" required>
+            <label for="team1">Team A</label>
+            <input #team1="ngModel" [(ngModel)]="fixture.team1" name="team1" id="team1" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf="team1.touched && team1.invalid">
+              Team A is required.
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="team2">Team B</label>
+              <input #team2="ngModel" [(ngModel)]="fixture.team2" name="team2" id="team2" type="text" class="form-control" required>
+              <div class="alert alert-danger" *ngIf="team2.touched && team2.invalid">
+                Team B is required.
+              </div>
+            </div> 
+            <div class="form-group">
+                <label for="sport">Sport</label>
+                <input #sport="ngModel" [(ngModel)]="fixture.sport" name="sport" id="sport" type="text" class="form-control" required>
+                <div class="alert alert-danger" *ngIf="sport.touched && sport.invalid">
+                  Sport is required.
+                </div>
+              </div> 
+              <div class="form-group">
+                  <label for="championship">Championship</label>
+                  <input #championship="ngModel" [(ngModel)]="fixture.championship" name="championship" id="championship" type="text" class="form-control" required>
+                  <div class="alert alert-danger" *ngIf="championship.touched && championship.invalid">
+                      Championship is required.
+                  </div>
+                </div> 
+                
+                <div class="form-group">
+                    <label for="championship">Start Time</label>
+                    <input #start_time="ngModel" [(ngModel)]="fixture.start_time" name="start_time" id="start_time" type="text" class="form-control" required>
+                    <div class="alert alert-danger" *ngIf="start_time.touched && start_time.invalid">
+                        Championship is required.
+                    </div>
+                  </div> 
+          <!-- <button class="btn btn-primary">Back to list</button> -->
+          <button type="button" (click)="backToHome()" class="btn btn-danger">Back to list</button> 
+        </form>    
+    </div>
+  </div>
+  
